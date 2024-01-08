@@ -1,26 +1,17 @@
-# dockerfile-template-pipenv
-Template for Pipenv-based Dockerfile
+# pokestarbot-v1 Docker
 
-Delete everything above the dash and the dash itself when making a new repo. Make sure to replace `<name>` as necessary.
-
-## Update order
-
-1. Update the README
-2. Update the Dockerfile
-3. Update the workflow. **Note: The first two steps can be done in either order, but it is absolutely necessary to do the third step last.**
-
-----
-
-# <name> Docker
-
-Source: https://github.com/PythonCoderAS/<original repo name>
+Source: https://github.com/PythonCoderAS/pokestarbot-v1
 
 ## Running
 
 ```bash
-docker run ghcr.io/pythoncoderas/<name>
+docker run ghcr.io/pythoncoderas/pokestarbot-v1
 ```
 
 ## Prerequisites
 
-Include any if needed, otherwise delete this section
+Follow the instructions in the parent repo.
+
+### Mappings
+* `/some/path:/app/bot_data/creds.py`
+* `/some/other/path:/app/bot_data/database.db`
