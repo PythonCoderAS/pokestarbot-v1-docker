@@ -1,4 +1,4 @@
-name: Build Docker Container
+ name: Build Docker Container
 
 on:
   push:
@@ -9,19 +9,11 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: 'pythoncoderas/<name>'
+  IMAGE_NAME: 'pythoncoderas/pokestarbot-v1'
 
 jobs:
-  get-image-name:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "null"
-    outputs:
-      image: ${{ env.IMAGE_NAME }}
   build:
     runs-on: ubuntu-latest
-    needs: [get-image-name]
-    if: ${{ needs.get-image-name.outputs.image != 'pythoncoderas/<name>' }}
     permissions:
       contents: read
       packages: write
