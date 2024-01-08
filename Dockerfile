@@ -1,8 +1,8 @@
-ARG GIT_REPO="Repo name"
+ARG GIT_REPO=pokestarbot-v1
 ARG GIT_OWNER=PythonCoderAS
 ARG GIT_CLONE_URL="https://github.com/${GIT_OWNER}/${GIT_REPO}.git"
 ARG GIT_BRANCH=master
-ARG PYTHON_VERSION=3.12
+ARG PYTHON_VERSION=3.8
 
 FROM alpine/git as clone
 
