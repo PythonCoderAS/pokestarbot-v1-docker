@@ -17,6 +17,7 @@ COPY --from=clone /app /app
 WORKDIR /app
 
 RUN ["pip", "install", "pipenv"]
+RUN ["pipenv", "upgrade", "pynacl"]
 RUN ["sh", "-c", "pipenv requirements --dev > requirements.txt"]
 RUN ["rm", "Pipfile", "Pipfile.lock"]
 
